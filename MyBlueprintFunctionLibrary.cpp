@@ -70,3 +70,37 @@ void UMyBlueprintFunctionLibrary::RenderTargetToPNG(FString filePath, UTextureRe
     FFileHelper::SaveArrayToFile(ImgData, *fullPath);
     
 }
+
+void UMyBlueprintFunctionLibrary::PrimeNumberCPP(UPARAM(ref) TArray<int>& PrimeArray, int MaxNum)
+{
+    //１回行列内容を消去
+    PrimeArray.Empty();
+
+    //MaxNumが2より小さかったら終了
+    if (MaxNum < 2) return;
+
+    //2からMaxNumまでを素数判定していく
+    for (int i = 2; i <= MaxNum; i++) {
+        bool IsPrime = true;
+
+        //課題：ここにiが素数でない場合IsPrimeがfalseになるような記述
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //IsPrimeがTrueのままであればPrimeArrayにiの値を入れる
+        if (IsPrime) {
+            PrimeArray.Add(i);
+        }
+    }
+}

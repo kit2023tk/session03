@@ -25,5 +25,9 @@ class THIRDPERSONCPP_API UMyBlueprintFunctionLibrary : public UBlueprintFunction
 		//RenderTargetを渡すと、PNGのバイト配列にして保存する
 		UFUNCTION(BlueprintCallable, Category = "TK")
 		static void RenderTargetToPNG(FString filePath, UTextureRenderTarget2D* SourceImg);
+
+		//ある数字までの素数を全て配列に保存する
+		UFUNCTION(BlueprintCallable, Category = "TK")
+		static void PrimeNumberCPP(UPARAM(ref) TArray<int>& PrimeArray, int MaxNum);
 	
 };
